@@ -9,3 +9,22 @@ init:
 install_git:
 	sudo apt update
 	sudo apt install git -y
+
+setup_deploy_service:
+	sudo systemctl edit --force --full deploy_script.service
+	sudo systemctl start deploy_script.service
+	sudo systemctl restart deploy_script.service
+
+# [Unit]
+# Description=My Script Service
+# Wants=network-online.target
+# After=network-online.target
+
+# [Service]
+# Type=simple
+# User=pi
+# WorkingDirectory=/home/pi
+# ExecStart=/home/pi/rapi-sensors/startup_script.sh
+
+# [Install]
+# WantedBy=multi-user.target
