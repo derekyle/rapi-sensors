@@ -15,6 +15,8 @@ setup_deploy_service:
 	sudo systemctl start deploy_script.service
 	sudo systemctl restart deploy_script.service
 
+#this this this
+
 # [Unit]
 # Description=My Script Service
 # Wants=network-online.target
