@@ -2,15 +2,15 @@ from gpiozero import OutputDevice
 from time import sleep
 
 relay1 = OutputDevice(
-    pin=10,
+    pin=0,
     active_high=False
     )
 relay2 = OutputDevice(
-    pin=9,
+    pin=5,
     active_high=False
     )
 relay3 = OutputDevice(
-    pin=11,
+    pin=6,
     active_high=False
     )
 #relay4 = OutputDevice(
