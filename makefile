@@ -15,6 +15,10 @@ setup_deploy_service:
 	sudo systemctl start deploy_script.service
 	sudo systemctl restart deploy_script.service
 
+install_ph_meter:
+	tar -xvf assets/hl_install_191020B.tar.gz --overwrite
+	sudo bash homelab_install.sh
+
 #this this this
 
 # [Unit]
