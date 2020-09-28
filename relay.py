@@ -1,10 +1,11 @@
-from gpiozero import OutputDevice, LineSensor
+from gpiozero import OutputDevice, Button
 from time import sleep
-from signal import pause
 
-sensor = LineSensor(24)
-sensor.when_line = lambda: print('Line detected')
-sensor.when_no_line = lambda: print('No line detected')
+from gpiozero import Button
+
+button = Button(24)
+
+
 # pause()
 
 relay1 = OutputDevice(
@@ -43,6 +44,7 @@ while True:
     sleep(1)
     relay3.off()
     sleep(1)
+    print(button.value())
 #    relay4.on()
 #    sleep(1)
 #    relay4.off()
