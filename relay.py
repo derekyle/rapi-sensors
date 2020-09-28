@@ -44,7 +44,7 @@ while True:
     sleep(1)
     relay3.off()
     sleep(1)
-    print(button.value())
+    print(button.value)
 #    relay4.on()
 #    sleep(1)
 #    relay4.off()
