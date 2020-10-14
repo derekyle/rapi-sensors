@@ -11,6 +11,8 @@ relay1 = OutputDevice(
     active_high=False
     )
 
+print("Turning on pump for ",args.time," seconds...")
 relay1.on()
 sleep(args.time)
+print("Turning pump off.")
 relay1.off()
